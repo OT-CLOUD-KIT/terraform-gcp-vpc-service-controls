@@ -28,8 +28,8 @@ module "vpc_service_controls" {
 
       # Start with no directional rules. Add narrowly scoped rules
       # only after reviewing the service's actual access requirements.
-      ingress_policies = {}
-      egress_policies  = {}
+      ingress_policies = []
+      egress_policies  = []
     }
   }
 

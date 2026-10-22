@@ -1,6 +1,6 @@
 module "access_policy" {
   source  = "terraform-google-modules/vpc-service-controls/google"
-  version = "8.2.0"
+  version = "8.0.0"
 
   parent_id   = var.parent_id
   policy_name = var.policy_name
@@ -9,7 +9,7 @@ module "access_policy" {
 
 module "access_level" {
   source  = "terraform-google-modules/vpc-service-controls/google//modules/access_level"
-  version = "8.2.0"
+  version = "8.0.0"
 
   for_each = var.access_levels
 
@@ -23,7 +23,7 @@ module "access_level" {
 
 module "regular_perimeter" {
   source  = "terraform-google-modules/vpc-service-controls/google//modules/regular_service_perimeter"
-  version = "8.2.0"
+  version = "8.0.0"
 
   for_each = var.enable_perimeters ? var.perimeters : {}
 

@@ -37,8 +37,8 @@ variable "perimeters" {
     resources           = list(string)
     restricted_services = set(string)
     access_level_keys   = optional(set(string), [])
-    ingress_policies    = optional(any, {})
-    egress_policies     = optional(any, {})
+    ingress_policies    = optional(any, [])
+    egress_policies     = optional(any, [])
   }))
   default = {}
 }
